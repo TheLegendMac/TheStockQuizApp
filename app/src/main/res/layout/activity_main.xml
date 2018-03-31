@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        tools:context="com.macrealstudios.gunsafetyquiz.MainActivity">
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="135dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/splashAppTitle"
+            android:textColor="@color/bgGrey"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/fromText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/appShortBio"
+            android:textColor="@color/bgGrey"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/yourPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/quizsplashimage" />
+
+        <TextView
+            android:id="@+id/shortBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yourPayIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="@string/fromText"
+            android:textColor="@color/bgGrey"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/helloBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shortBio"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/hellobutton"
+            android:fontFamily="@font/montserrat"
+            android:paddingBottom="15dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:paddingTop="15dp"
+            android:text="@string/helloBtn"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</ScrollView>

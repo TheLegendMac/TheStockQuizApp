@@ -1,0 +1,89 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+
+
+    </style>
+
+    <!--This is for the custom Action Bar-->
+    <style name="captureTitleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--Title bar text-->
+    <style name="activityTitleText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/bgGrey</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+
+    <!--This is for the editText boxes within the app-->
+    <style name="editTextBox">
+        <item name="android:backgroundTint">@color/bgGrey</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/bgGrey</item>
+        <item name="android:textColorHighlight">@color/bgGrey</item>
+        <item name="android:textColorHint">@color/bgGrey</item>
+    </style>
+
+    <!--This is for the subTitle boxes within the app-->
+    <style name="subTitleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:textColor">#4285f4</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:textColorHighlight">@color/bgGrey</item>
+        <item name="android:textColorHint">@color/bgGrey</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--This is for the Square yellow buttons Bar boxes within the app-->
+    <style name="squareButton">
+        <item name="android:textColor">#FFFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="radioBtnStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:buttonTint">@color/bgGrey</item>
+        <item name="android:textColor">@color/bgGrey</item>
+    </style>
+</resources>

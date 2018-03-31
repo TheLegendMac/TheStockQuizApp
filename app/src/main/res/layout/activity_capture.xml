@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF"
+        android:orientation="vertical"
+        tools:context="com.macrealstudios.gunsafetyquiz.captureActivity">
+
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            style="@style/captureTitleBar"
+            android:background="@drawable/white_gradient">
+
+            <TextView
+                android:id="@+id/captureTitle"
+                style="@style/activityTitleText"
+                android:text="@string/captureYouTitle" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/usernameSubtitle"
+            style="@style/subTitleText"
+            android:layout_below="@+id/titleBar"
+            android:layout_marginTop="50dp"
+            android:text="@string/namesubTilte" />
+
+        <EditText
+            android:id="@+id/usernameEditBox"
+            style="@style/editTextBox"
+            android:layout_below="@id/usernameSubtitle"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/areYouReady"
+            style="@style/subTitleText"
+            android:layout_below="@id/usernameEditBox"
+            android:text="@string/yearsOnTheHunt" />
+
+
+        <RadioGroup
+            android:id="@+id/areYouReadyGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/areYouReady"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/yes_radio"
+                style="@style/radioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/no_radio"
+                style="@style/radioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Maybe not" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/nextBtn"
+            style="@style/squareButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/hellobutton"
+            android:text="@string/nextBtn"
+            android:textCursorDrawable="@color/bgGrey" />
+    </RelativeLayout>
+</ScrollView>

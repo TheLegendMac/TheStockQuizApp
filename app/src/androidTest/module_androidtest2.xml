@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_androidtest2" default="compile.module.androidtest2">
+  <dirname property="module.androidtest2.basedir" file="${ant.file.module_androidtest2}"/>
+  
+  <property name="module.jdk.home.androidtest2" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.androidtest2" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.androidtest2" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.androidtest2" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="androidtest2.output.dir" value="${module.androidtest2.basedir}/../../../out/production/androidTest2"/>
+  <property name="androidtest2.testoutput.dir" value="${module.androidtest2.basedir}/../../../out/test/androidTest2"/>
+  
+  <path id="androidtest2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="androidtest2.module.production.classpath">
+    <path refid="${module.jdk.classpath.androidtest2}"/>
+    <path refid="library.mockable-android-27.v3.classpath"/>
+    <pathelement location="${androidtest.output.dir}"/>
+  </path>
+  
+  <path id="androidtest2.runtime.production.module.classpath">
+    <pathelement location="${androidtest2.output.dir}"/>
+    <path refid="library.mockable-android-27.v3.classpath"/>
+    <path refid="androidtest.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="androidtest2.module.classpath">
+    <path refid="${module.jdk.classpath.androidtest2}"/>
+    <pathelement location="${androidtest2.output.dir}"/>
+    <path refid="library.mockable-android-27.v3.classpath"/>
+    <pathelement location="${androidtest.testoutput.dir}"/>
+    <pathelement location="${androidtest.output.dir}"/>
+  </path>
+  
+  <path id="androidtest2.runtime.module.classpath">
+    <pathelement location="${androidtest2.testoutput.dir}"/>
+    <pathelement location="${androidtest2.output.dir}"/>
+    <path refid="library.mockable-android-27.v3.classpath"/>
+    <path refid="androidtest.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.androidtest2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.androidtest2">
+    <patternset refid="excluded.from.module.androidtest2"/>
+  </patternset>
+  
+  <path id="androidtest2.module.sourcepath">
+    <dirset dir="${module.androidtest2.basedir}">
+      <include name="java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.androidtest2" depends="compile.module.androidtest2.production,compile.module.androidtest2.tests" description="Compile module androidTest2"/>
+  
+  <target name="compile.module.androidtest2.production" depends="register.custom.compilers,compile.module.androidtest" description="Compile module androidTest2; production classes">
+    <mkdir dir="${androidtest2.output.dir}"/>
+    <javac2 destdir="${androidtest2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.androidtest2}/javac">
+      <compilerarg line="${compiler.args.androidtest2}"/>
+      <bootclasspath refid="androidtest2.module.bootclasspath"/>
+      <classpath refid="androidtest2.module.production.classpath"/>
+      <src refid="androidtest2.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.androidtest2"/>
+    </javac2>
+    
+    <copy todir="${androidtest2.output.dir}">
+      <fileset dir="${module.androidtest2.basedir}/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.androidtest2.tests" depends="register.custom.compilers,compile.module.androidtest2.production" description="compile module androidTest2; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.androidtest2" description="cleanup module">
+    <delete dir="${androidtest2.output.dir}"/>
+    <delete dir="${androidtest2.testoutput.dir}"/>
+  </target>
+</project>

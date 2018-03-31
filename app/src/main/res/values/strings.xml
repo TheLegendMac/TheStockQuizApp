@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">The Stock Quiz</string>
+    <string name="appNameTitle">The Stock Quiz</string>
+    <string name="helloBtn">Let\'s Begin</string>
+    <string name="fromText">Made with love in Jax</string>
+    <string name="splashAppTitle">The Stock Quiz</string>
+    <string name="appShortBio">Test your knowledge!</string>
+    <string name="captureYouTitle">Some basics...</string>
+    <string name="namesubTilte">What\'s your name?</string>
+    <string name="nextBtn">Next</string>
+    <string name="yearsOnTheHunt">Are you ready to quiz?</string>
+    <string name="doneBtn">Done</string>
+
+</resources>
