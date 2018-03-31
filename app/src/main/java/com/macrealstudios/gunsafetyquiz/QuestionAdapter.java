@@ -23,7 +23,7 @@ class QuestionsAdapter extends ArrayAdapter<Questions> {
      * to populate into the lists.
      *
      * @param context   The current context. Used to inflate the layout file.
-     * @param questions A List of AndroidFlavor objects to display in a list
+     * @param questions A List of Text objects to display in a list
      */
     public QuestionsAdapter(Activity context, ArrayList<Questions> questions) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
@@ -51,12 +51,12 @@ class QuestionsAdapter extends ArrayAdapter<Questions> {
                     R.layout.question_card, parent, false);
         }
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
+        // Get the {@link Text} object located at this position in the list
         Questions currentRadioBtn = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView questionTitle = listItemView.findViewById(R.id.questionText);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Text object and
         // set this text on the name TextView
         questionTitle.setText(currentRadioBtn.getQuestionText());
 
@@ -64,22 +64,21 @@ class QuestionsAdapter extends ArrayAdapter<Questions> {
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         RadioButton radioButton1 = listItemView.findViewById(R.id.radioButton);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Text object and
         // set this text on the name TextView
         radioButton1.setText(currentRadioBtn.getAnswerExample1());
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         RadioButton radioButton2 = listItemView.findViewById(R.id.radioButton2);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Text object and
         // set this text on the name TextView
         radioButton2.setText(currentRadioBtn.getAnswerExample2());
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         RadioButton radioButton3 = listItemView.findViewById(R.id.radioButton3);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Text object and
         // set this text on the name TextView
         radioButton3.setText(currentRadioBtn.getAnswerExample3());
-
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
