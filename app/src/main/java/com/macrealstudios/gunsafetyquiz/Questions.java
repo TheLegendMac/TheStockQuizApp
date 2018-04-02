@@ -1,6 +1,8 @@
 package com.macrealstudios.gunsafetyquiz;
 
 
+import android.widget.RadioGroup;
+
 /**
  * Created by termi on 3/24/2018.
  */
@@ -8,21 +10,20 @@ package com.macrealstudios.gunsafetyquiz;
 public class Questions {
 
 
-    private String mQuestionNumber;
+    private RadioGroup mRadioGroup;
     private String mQuestionText;
     private String mAnswerExample1;
     private String mAnswerExample2;
     private String mAnswerExample3;
-    private boolean selected;
 
 
     //constructor for making a question object
-    public Questions(String questionNumber,
+    public Questions(RadioGroup radioGroup,
                      String questionText,
                      String answerExample1,
                      String answerExample2,
                      String answerExample3) {
-        mQuestionNumber = questionNumber;
+        mRadioGroup = radioGroup;
         mQuestionText = questionText;
         mAnswerExample1 = answerExample1;
         mAnswerExample2 = answerExample2;
@@ -30,8 +31,8 @@ public class Questions {
     }
 
     //accessor. allows question number to be accessed
-    String getQuestionNumber() {
-        return mQuestionNumber;
+    RadioGroup getRadioGroup() {
+        return mRadioGroup;
     }
 
     //accessor. allows question text to be accessed
