@@ -18,12 +18,11 @@ public class Questions {
 
 
     //constructor for making a question object
-    public Questions(RadioGroup radioGroup,
+    public Questions(
                      String questionText,
                      String answerExample1,
                      String answerExample2,
                      String answerExample3) {
-        mRadioGroup = radioGroup;
         mQuestionText = questionText;
         mAnswerExample1 = answerExample1;
         mAnswerExample2 = answerExample2;
