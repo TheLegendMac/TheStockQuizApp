@@ -59,7 +59,7 @@ public class questions_activity extends AppCompatActivity {
         questionText.add(new Questions("Which is the best definition of \"selling short\"?", "Selling shares of a stock at a loss", "Selling borrowed shares of a stock", "Selling shares of a stock before it has reached its peak"));
 
         //Logging statements to verbose Logcat
-        Log.v("Numbers Activity", "ArrayList created with a total of " + questionText.size());
+        Log.v("Question Activity", "Question ArrayList created with a total of " + questionText.size());
 
         QuestionsAdapter questionsAdapter = new QuestionsAdapter(this, questionText);
 
