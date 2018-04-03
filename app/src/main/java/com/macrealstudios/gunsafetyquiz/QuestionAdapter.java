@@ -62,10 +62,7 @@ class QuestionsAdapter extends ArrayAdapter<Questions> {
         int checkedRadioId = radioGroup.getCheckedRadioButtonId();
 
         //The findViewById is where I am getting the error message and then then whole line of the if statement has the red squiggly line
-        RadioButton checkedRadioBtn = findViewById(checkedRadioId);
-        if(checkedRadioId == currentQuestionPosition.getAnswerExample1()){
-
-        }
+        RadioButton checkedRadioBtn = (RadioButton) findViewById(checkedRadioId);
 
 
 
