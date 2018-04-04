@@ -11,12 +11,12 @@
     <string name="yearsOnTheHunt">Are you ready to quiz?</string>
     <string name="doneBtn">Done</string>
 
-    <string-array name="questions_text">
-        <item>If you buy a companies stock you...</item>
-        <item>Which type of bond is the safest?</item>
-        <item>Which of the following organizations insures you against your losses in the stock market?</item>
-        <item>You invest $500 to buy $1,000 worth of stock on margin. The value of the stock drops by 50%. You sell it. Approximately how much of your original $500 investment are you left with in the end?</item>
-        <item>Which is the best definition of "selling short"?></item>
+    <string-array name="question_answers">
+        <item>Own a part of that company</item>
+        <item>U.S. Treasury bond</item>
+        <item>None</item>
+        <item>$0</item>
+        <item>Selling borrowed shares of a stock</item>
 
     </string-array>
 
