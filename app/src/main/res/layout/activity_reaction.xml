@@ -4,40 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="com.macrealstudios.gunsafetyquiz.reactionActivity">
+        tools:context="com.macrealstudios.gunsafetyquiz.ReactionActivity">
 
         <RelativeLayout
             android:id="@+id/titleBar"
-            style="@style/captureTitleBar">
+            style="@style/captureTitleBar"
+            android:background="@drawable/white_gradient">
 
             <TextView
                 android:id="@+id/captureTitle"
                 style="@style/activityTitleText"
-                android:text="@string/captureYouTitle" />
+                android:text="@string/result_title" />
 
         </RelativeLayout>
 
-
-        <ImageView
-            android:id="@+id/reactionGif"
+        <View
+            android:layout_below="@id/titleBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:cropToPadding="true"
-            android:scaleType="centerCrop" />
+            android:layout_height="4dp"
+            android:background="@drawable/shadow" />
+        <android.support.v7.widget.CardView
+            style="@style/card_style"
+            ads:cardBackgroundColor="@android:color/white"
+            ads:cardUseCompatPadding="true"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/reaction_text"
+                    style="@style/subTitleText"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:layout_marginBottom="25dp"/>
+                <ImageView
+                    android:id="@+id/reaction_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:cropToPadding="true"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <Button
-            android:id="@+id/nextBtn"
+            android:id="@+id/share_button"
             style="@style/squareButton"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="65dp"
             android:background="@drawable/hellobutton"
-            android:text="@string/nextBtn" />
-
+            android:text="@string/share_text"
+            android:textCursorDrawable="@color/bgGrey" />
+        <Button
+            android:id="@+id/new_quiz_button"
+            style="@style/squareButton"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginBottom="65dp"
+            android:background="@drawable/hellobutton"
+            android:text="@string/new_quiz_text"
+            android:textCursorDrawable="@color/bgGrey" />
     </RelativeLayout>
 </ScrollView>

@@ -1,18 +1,21 @@
 package com.macrealstudios.gunsafetyquiz;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class captureActivity extends AppCompatActivity {
+public class CaptureActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,12 @@ public class captureActivity extends AppCompatActivity {
 
         //Setting notification bar color
         setNotificationBarColor();
+
+        //Getting email stored in editBox
+        EditText email_edit_text = findViewById(R.id.usernameEditBox);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("email", email_edit_text.getText().toString());
 
         //Initializing and creating what happens when the user clicks the next button
         Button nextBtn = findViewById(R.id.nextBtn);
@@ -57,10 +66,10 @@ public class captureActivity extends AppCompatActivity {
 
         //If the yes radio button is clicked then preform this below
         if (checkedRadioBtn == yesRadio) {
-            Intent i = new Intent(captureActivity.this, questions_activity.class);
+            Intent i = new Intent(CaptureActivity.this, QuestionActivity.class);
             startActivity(i);
         } else {
-            Toast.makeText(captureActivity.this, "You are not ready yet!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CaptureActivity.this, "You are not ready yet!", Toast.LENGTH_SHORT).show();
         }
     }
 }
