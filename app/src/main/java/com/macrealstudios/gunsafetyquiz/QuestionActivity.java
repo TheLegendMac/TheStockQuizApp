@@ -93,8 +93,8 @@ public class QuestionActivity extends AppCompatActivity {
                 editor.apply();
             }
 
-            editor.putString("test_one", getString(R.string.reaction_text,quizScore));
-            editor.putInt("test", quizScore);
+            editor.putString("get_score_message", getString(R.string.reaction_text,quizScore));
+            editor.putInt("get_quiz_score", quizScore);
             editor.apply();
             Intent i = new Intent(this, ReactionActivity.class);
             startActivity(i);

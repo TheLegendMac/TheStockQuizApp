@@ -43,14 +43,6 @@
     <string name="group_one_answer_three">Must be rich!</string>
     <string name="share_text">Share</string>
     <string name="new_quiz_text">New</string>
-
-    <string-array name="question_answers">
-        <item>Own a part of that company</item>
-        <item>U.S. Treasury bond</item>
-        <item>None</item>
-        <item>$0</item>
-        <item>Selling borrowed shares of a stock</item>
-
-    </string-array>
+    <string name="terms_toast">You have not agreed yet!</string>
 
 </resources>

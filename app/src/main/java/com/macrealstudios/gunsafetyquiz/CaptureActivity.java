@@ -69,7 +69,7 @@ public class CaptureActivity extends AppCompatActivity {
             Intent i = new Intent(CaptureActivity.this, QuestionActivity.class);
             startActivity(i);
         } else {
-            Toast.makeText(CaptureActivity.this, "You are not ready yet!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CaptureActivity.this, R.string.terms_toast, Toast.LENGTH_SHORT).show();
         }
     }
 }

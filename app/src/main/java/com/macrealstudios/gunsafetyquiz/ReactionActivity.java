@@ -45,7 +45,7 @@ public class ReactionActivity extends AppCompatActivity {
         TextView reaction_text = findViewById(R.id.reaction_text);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String getReactionTxt = prefs.getString("test_one", "hello");
+        String getReactionTxt = prefs.getString("get_score_message", "hello");
         reaction_text.setText(getReactionTxt);
         boolean previouslyStarted = prefs.getBoolean("activity_excuted", false);
         if (previouslyStarted == true) {
@@ -76,7 +76,7 @@ public class ReactionActivity extends AppCompatActivity {
                 // Use an intent to launch an email app.
                 // Send the order summary in the email body.
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ReactionActivity.this);
-                int getScore = prefs.getInt("test", 0);
+                int getScore = prefs.getInt("get_quiz_score", 0);
                 Intent intent = new Intent(Intent.ACTION_SENDTO)
                         .setData(Uri.parse("mailto:"))
                         .putExtra(Intent.EXTRA_SUBJECT, "The Stock Quiz Test Score")
