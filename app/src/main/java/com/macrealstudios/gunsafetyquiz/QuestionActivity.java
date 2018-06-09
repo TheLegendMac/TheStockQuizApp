@@ -61,22 +61,22 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void checkAnswers() {
         if (getQuestion1()) {
-            quizScore += 1;
+            quizScore++;
         }
         if (getQuestion2()) {
-            quizScore += 1;
+            quizScore++;
         }
         if (getQuestion3()) {
-            quizScore += 1;
+            quizScore++;
         }
         if (getQuestion4()) {
-            quizScore += 1;
+            quizScore++;
         }
         if (getQuestion5()) {
-            quizScore += 1;
+            quizScore++;
         }
         if (getQuestion6()) {
-            quizScore += 1;
+            quizScore++;
         }
         // Will show this toast message if the user incorrectly answered all of the questions
         if (quizScore == 0) {
