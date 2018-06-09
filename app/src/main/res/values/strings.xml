@@ -13,7 +13,7 @@
     <string name="result_title">Results</string>
     <string name="yes_text">I understand</string>
     <string name="no_text">I decline</string>
-    <string name="try_again_toast">Try Again!</string>
+    <string name="try_again_toast">Try Again %s!</string>
     <string name="reaction_text">You scored %d out of 6 points!</string>
     <string name="quiz_score_toast">%d out of 6 points!</string>
     <string name="checkbox_one_answer">Ponzi Schemes</string>

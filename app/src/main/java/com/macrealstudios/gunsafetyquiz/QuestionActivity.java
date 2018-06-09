@@ -18,8 +18,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+
 public class QuestionActivity extends AppCompatActivity {
 
+
+    private static final Object DEFAULT = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +80,9 @@ public class QuestionActivity extends AppCompatActivity {
         }
         // Will show this toast message if the user incorrectly answered all of the questions
         if (quizScore == 0) {
-            Toast.makeText(this, R.string.try_again_toast, Toast.LENGTH_LONG).show();
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(QuestionActivity.this);
+            String capture_username_editbox = sharedPreferences.getString("username", "hello");
+            Toast.makeText(this, getString(R.string.try_again_toast, capture_username_editbox), Toast.LENGTH_LONG).show();
 
             // Score Toast displays total quiz score when check answers is pressed
         } else {
@@ -102,6 +107,8 @@ public class QuestionActivity extends AppCompatActivity {
             quizScore = 0;
         }
     }
+
+
 
     public Boolean getQuestion1() {
         RadioButton questionOne = findViewById(R.id.rbOne);

@@ -28,11 +28,11 @@ public class CaptureActivity extends AppCompatActivity {
         //Setting notification bar color
         setNotificationBarColor();
 
-        //Getting email stored in editBox
-        EditText email_edit_text = findViewById(R.id.usernameEditBox);
+        //Getting the username stored in editBox
+        EditText capture_username_editbox = findViewById(R.id.usernameEditBox);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("email", email_edit_text.getText().toString());
+        editor.putString("username", capture_username_editbox.getText().toString());
 
         //Initializing and creating what happens when the user clicks the next button
         Button nextBtn = findViewById(R.id.nextBtn);
